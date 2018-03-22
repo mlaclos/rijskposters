@@ -64,7 +64,7 @@ export class ArtSearcher extends React.Component {
 
 
         return (
-            <div>
+            <div className='main-container'>
                 <h1>Poster creator</h1>
                 <div className='left'>
                     <form onSubmit={this.handleSearch}>
@@ -110,5 +110,3 @@ export class ArtSearcher extends React.Component {
     }
 
 }
-
-

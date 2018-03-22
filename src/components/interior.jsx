@@ -20,8 +20,8 @@ export class Interior extends React.Component {
 
     render() {
         return (
-            <div>
-                <div style={{border: '3px solid yellow'}}>
+            <div className='interior-bgd'>
+                <div className='frame'>
                     <img  src={this.state.choosen} /></div>
             </div>
         )
