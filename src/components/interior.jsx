@@ -59,7 +59,7 @@ export class Interior extends React.Component {
                   }}/></div>
          </div>
          <div>
-            <h3>Choose a frame</h3>
+            <h3>Choose a&nbsp;frame</h3>
             <div className="galleryFrame">
                <div id="wood" className='frameColor' onClick={this.handleChooseFrame}></div>
                <div className="nameFrame">Wood</div>
@@ -79,7 +79,7 @@ export class Interior extends React.Component {
 
          </div>
          <div className='upload'>
-            <label className="fileContainer">Upload your wall
+            <label className="fileContainer">Upload a picture of your wall
                <input type="file" value="" onChange={this.handleImageChange}/>
             </label>
 
