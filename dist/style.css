@@ -1,15 +1,169 @@
-* {
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700);* {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
-  background-color: red; }
+  font-family: 'Quicksand', sans-serif; }
+  body h1 {
+    color: #000;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px; }
+    body h1 span {
+      color: #ca0b0b; }
+  body h2 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px; }
+  body select {
+    width: 350px;
+    height: 40px;
+    margin: 25px 0;
+    color: #343537;
+    border: 1px solid #ADB4BC;
+    border-radius: 3px 0 0 3px;
+    font-family: 'Quicksand', sans-serif; }
+  body button {
+    background-color: #000;
+    border: 1px solid #000;
+    height: 40px;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 0 3px 3px 0;
+    min-width: 100px;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700; }
+  body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px; }
+  body .fileContainer {
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    border: 1px solid #000;
+    height: 40px;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 0 3px 3px 0;
+    min-width: 100px;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    border-radius: 3px;
+    height: 60px;
+    padding: 10px; }
+  body .fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0; }
+  body .main-container {
+    width: 1080px;
+    margin: 0 auto; }
 
 .left {
   width: 50%;
   float: left; }
+  .left .resultOfSearch {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start; }
+    .left .resultOfSearch .gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      width: 125px; }
+      .left .resultOfSearch .gallery img {
+        width: 100%;
+        height: auto; }
+      .left .resultOfSearch .gallery .picTitle {
+        padding: 10px;
+        text-align: center;
+        font-size: 12px; }
+      .left .resultOfSearch .gallery:hover {
+        border: 1px solid #777; }
 
 .right {
   float: right;
   width: 50%; }
+  .right .interior-bgd {
+    background-image: url(3b160df8553b05285742c101be32603f.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 75%;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    float: left;
+    margin: 0 15px; }
+    .right .interior-bgd .painting {
+      position: absolute;
+      top: 1%;
+      left: 32%;
+      height: 212px;
+      width: 150px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; }
+      .right .interior-bgd .painting img {
+        box-sizing: content-box;
+        max-height: 150px;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+        border: 0 solid transparent;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .right .galleryFrame {
+    float: left;
+    border: 1px solid #ccc;
+    margin: 5px 0; }
+    .right .galleryFrame:hover {
+      border: 2px solid #777; }
+    .right .galleryFrame .frameColor {
+      background-color: #fff;
+      background-size: cover;
+      width: 84px;
+      height: 84px; }
+    .right .galleryFrame .nameFrame {
+      padding-bottom: 5px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500; }
+    .right .galleryFrame #wood {
+      background-image: url(19b0cb7498994616ae03a5ae9dd59875.jpg); }
+    .right .galleryFrame #white {
+      background-image: url(3c5eba8340a001d198d70c54cc6c4d80.jpg); }
+    .right .galleryFrame #black {
+      background-image: url(e624b790b25010c690dfe7e3d85d76a4.jpg); }
+    .right .galleryFrame #none {
+      background-color: #fff; }
+  .right .upload {
+    float: left;
+    margin: 0 15px; }

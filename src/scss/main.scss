@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@mixin button {
+   background-color: #000;
+   border: 1px solid #000;
+   height: 40px;
+   font-size: 15px;
+   letter-spacing: 0.15em;
+   text-transform: uppercase;
+   border-radius: 0 3px 3px 0;
+   min-width: 100px;
+   color: #fff;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 700;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -6,6 +21,68 @@
 
 body {
    //background-color: red;
+   font-family: 'Quicksand', sans-serif;
+
+   h1 {
+      color: #000;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 5px;
+
+      span {
+         color: #ca0b0b;
+      }
+   }
+
+   h2 {
+      color: #000;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 5px;
+   }
+
+   select {
+      width: 350px;
+      height: 40px;
+      margin: 25px 0;
+      color: #343537;
+      border: 1px solid #ADB4BC;
+      border-radius: 3px 0 0 3px;
+      font-family: 'Quicksand', sans-serif;
+   }
+
+   button {
+      @include button;
+   }
+
+   h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+   }
+
+   .fileContainer {
+      overflow: hidden;
+      position: relative;
+      @include button;
+      border-radius: 3px;
+      height: 60px;
+      padding: 10px;
+   }
+
+   .fileContainer [type=file] {
+      cursor: inherit;
+      display: block;
+      font-size: 999px;
+      filter: alpha(opacity=0);
+      min-height: 100%;
+      min-width: 100%;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 0;
+   }
 
    .main-container {
       width: 1080px;
@@ -16,6 +93,36 @@ body {
 .left {
    width: 50%;
    float: left;
+
+   .resultOfSearch {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-content: flex-start;
+
+      .gallery {
+         margin: 5px;
+         border: 1px solid #ccc;
+         //float: left;
+         width: 125px;
+
+         img {
+            width: 100%;
+            height: auto;
+         }
+
+         .picTitle {
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+         }
+
+         &:hover {
+            border: 1px solid #777;
+         }
+      }
+   }
 }
 
 .right {
@@ -24,21 +131,23 @@ body {
 
    .interior-bgd {
       //background-color: black;
-      background-image: url("../../images/mockup15.jpg");
+      background-image: url("../../images/mockup12.jpg");
       background-size: contain;
       background-repeat: no-repeat;
       height: 550px;
-      width: 550px;
+      width: 75%;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      float: left;
+      margin: 0 15px;
 
-      .frame {
+      .painting {
          //border: 2px solid black;
          position: absolute;
-         top: 5%;
-         left: 38%;
+         top: 1%;
+         left: 32%;
          height: 212px;
          width: 150px;
          //right: 0;
@@ -46,16 +155,63 @@ body {
          justify-content: center;
          align-items: center;
          //background-color: black;
-
          img {
             //padding: 10px;
-            max-height: 200px;
-            //width: 150px;
+            box-sizing: content-box;
+            max-height: 150px;
+            width: auto;
             background-size: cover;
             background-position: center;
-            //border: 2px solid black;
+            border: 0 solid transparent;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
          }
       }
+   }
+
+   .galleryFrame {
+      float: left;
+      border: 1px solid #ccc;
+      margin: 5px 0;
+
+      &:hover {
+         border: 2px solid #777;
+      }
+
+      .frameColor {
+         background-color: #fff;
+         background-size: cover;
+         width: 84px;
+         height: 84px;
+      }
+
+      .nameFrame {
+         padding-bottom: 5px;
+         text-align: center;
+         font-size: 13px;
+         font-weight: 500;
+      }
+
+      #wood {
+         background-image: url("../../images/woodFrame.jpg");
+      }
+
+      #white {
+         background-image: url("../../images/whiteFrame.jpg");
+      }
+
+      #black {
+         background-image: url("../../images/blackFrame.jpg");
+      }
+
+      #none {
+         background-color: #fff;
+      }
+   }
+
+   .upload {
+      float: left;
+      margin: 0 15px;
+
+      input {}
    }
 }
